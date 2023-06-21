@@ -1,15 +1,15 @@
 {
-  "name": "ai",
-  "version": "0.0.0",
+  "name": "strapi-ai-image-plugin",
+  "version": "0.0.1",
   "description": "This is the description of the plugin.",
   "scripts": {
     "postinstall": "patch-package"
   },
   "strapi": {
-    "name": "ai",
-    "description": "Description of Ai plugin",
+    "name": "strapi-ai-image-plugin",
+    "description": "Plugin for generation images using AI. Adds additional tab in media library. Uses stability.ai API.",
     "kind": "plugin",
-    "displayName": "Ai"
+    "displayName": "Strapi AI image plugin"
   },
   "dependencies": {
     "@strapi/design-system": "^1.6.6",
