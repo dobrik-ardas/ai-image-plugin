@@ -61,6 +61,7 @@ export const FromAiForm = ({ onClose, onAddAsset, trackedLocation }) => {
   }
 
   useEffect(() => {
+    updateBalance();
     request(`/ai/config/image`, { method: 'GET' })
       .then((res) => {
         if(!_.isEmpty(res)) {
@@ -71,7 +72,6 @@ export const FromAiForm = ({ onClose, onAddAsset, trackedLocation }) => {
             samples: res.samples,
           })
         }
-        updateBalance()
       })
       .catch(() => {
       })
