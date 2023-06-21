@@ -6,7 +6,7 @@ index c417485..ae5af8d 100644
  import { useIntl } from 'react-intl';
  import { FromUrlForm } from './FromUrlForm';
  import { FromComputerForm } from './FromComputerForm';
-+import { FromAiForm } from 'ai/admin/src/components/Upload/FromAiForm';
++import { FromAiForm } from 'strapi-ai-image-plugin/admin/src/components/Upload/FromAiForm';
  import getTrad from '../../../utils/getTrad';
  
  export const AddAssetStep = ({ onClose, onAddAsset, trackedLocation }) => {
