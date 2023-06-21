@@ -1,0 +1,39 @@
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/UploadAssetDialog/AddAssetStep/AddAssetStep.js b/node_modules/@strapi/plugin-upload/admin/src/components/UploadAssetDialog/AddAssetStep/AddAssetStep.js
+index c417485..ae5af8d 100644
+--- a/node_modules/@strapi/plugin-upload/admin/src/components/UploadAssetDialog/AddAssetStep/AddAssetStep.js
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/UploadAssetDialog/AddAssetStep/AddAssetStep.js
+@@ -14,6 +14,7 @@ import {
+ import { useIntl } from 'react-intl';
+ import { FromUrlForm } from './FromUrlForm';
+ import { FromComputerForm } from './FromComputerForm';
++import { FromAiForm } from '/src/plugins/ai/admin/src/components/Upload/FromAiForm';
+ import getTrad from '../../../utils/getTrad';
+ 
+ export const AddAssetStep = ({ onClose, onAddAsset, trackedLocation }) => {
+@@ -51,6 +52,12 @@ export const AddAssetStep = ({ onClose, onAddAsset, trackedLocation }) => {
+                 defaultMessage: 'From URL',
+               })}
+             </Tab>
++            <Tab>
++              {formatMessage({
++                id: getTrad('modal.nav.ai'),
++                defaultMessage: 'AI generation',
++              })}
++            </Tab>
+           </Tabs>
+ 
+           <Divider />
+@@ -70,6 +77,13 @@ export const AddAssetStep = ({ onClose, onAddAsset, trackedLocation }) => {
+               trackedLocation={trackedLocation}
+             />
+           </TabPanel>
++          <TabPanel>
++            <FromAiForm
++              onClose={onClose}
++              onAddAsset={onAddAsset}
++              trackedLocation={trackedLocation}
++            />
++          </TabPanel>
+         </TabPanels>
+       </TabGroup>
+     </>
