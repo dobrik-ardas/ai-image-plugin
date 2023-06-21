@@ -32,10 +32,11 @@ const blobsToAssets = (blobs) => {
       mime: blob.type,
       name: filename,
       rawFile: loadedFile,
-      size: blob.size,
+      size: blob.size / 1000,
       source: AssetSource.Computer,
       type: 'image',
       url: URL.createObjectURL(blob),
+      isLocal: true
     };
   })
 }

@@ -70,8 +70,8 @@ export const FromAiForm = ({ onClose, onAddAsset, trackedLocation }) => {
             cfgScale: res.cfgScale,
             samples: res.samples,
           })
-          updateBalance()
         }
+        updateBalance()
       })
       .catch(() => {
       })
