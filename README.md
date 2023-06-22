@@ -1,3 +1,2 @@
-# Strapi plugin ai
+# Strapi plugin strapi-ai-image-plugin
 
-A quick description of ai.
